@@ -1,49 +1,46 @@
+# Chat distribuido seguro en Node.js - Trabajo Práctico Final
 
-# Chat distribuido seguro en Node.js – Entrega Parcial
+## Arquitectura del proyecto
 
-## Requisitos previos
+### Servidor
 
-- Tener creada la carpeta `logs/` antes de ejecutar el servidor.
-
----
-
-## Ejecución
-
-### 1. Iniciar el servidor
-
-Abrir una terminal y ejecutar:
-node server.js
-
-El servidor se iniciará en el puerto **4000** y quedará esperando conexiones.
+server.js
 
 ---
 
-### 2. Conectarse como cliente
+### Cliente
 
-Abrir **una o más terminales nuevas** y ejecutar:
+#### login.html
 
-```bash
-node client.js
-```
+#### chat.html
 
----
-
-## Comandos disponibles
-
-Dentro del cliente podés usar los siguientes comandos:
-
-| Comando        | Descripción                        |
-| -------------- | ---------------------------------- |
-| `/nick nombre` | Cambia tu usuario        |
-| `/lista`       | Muestra usuarios conectados    |
-| `/salir`       | Cierra la conexión y sale del chat |
+#### crypto.js
 
 ---
 
-## Logs
+### Logging
 
-Todos los mensajes/eventos se registran en el archivo:
+chat.log
+
+---
+
+## Cómo ejecutar el proyecto
+
+**Instalar dependencias**
+
+```npm install```
+
+**Iniciar el servidor**
+
+```npm start```
+
+**Abrir el navegador**
+
+```http://localhost:4000/login.html```
+
+**Chat en tiempo real**
 
 ```
-logs/chat.log
+Al iniciar sesión se redirigie a:
+/chat.html
 ```

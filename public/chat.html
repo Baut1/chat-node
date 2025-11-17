@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Chat</title>
+
+  <!-- CryptoJS -->
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
+  <script src="crypto.js"></script>
+
+  <style>
+    #mensajes {
+      border: 1px solid #cccccc;
+      height: 600px;
+      overflow-y: auto;
+      padding: 5px;
+      width: 500px;
+      background: #ffffff;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Chat Seguro</h3>
+
+  <div id="mensajes"></div>
+  <br>
+
+  <input id="txt" placeholder="Mensaje" style="width:300px;">
+  <button onclick="sendMsg()">Enviar</button>
+
+  <script>
+    // Obtencion token y clave AES
+    const token = localStorage.getItem("token");
+    const key = localStorage.getItem("sessionKey");
+
+    if (!token || !key) {
+      alert("No hay sesión iniciada. Redirigiendo al login.");
+      window.location = "/login.html";
+    }
+
+    // Conexión Web Socket
+    const ws = new WebSocket(`ws://${location.host}/?token=${token}`);
+
+    ws.onopen = () => {
+      addMsg("Conectado al servidor");
+    };
+
+    ws.onmessage = ev => {
+      const text = decrypt(ev.data, key);
+      addMsg(text);
+    };
+
+    ws.onclose = () => {
+      addMsg("Desconectado del server");
+    };
+
+    ws.onerror = err => {
+      console.error("Error Web socket:", err);
+    };
+
+    // Enviar mensaje
+    function sendMsg() {
+      const texto = document.getElementById("txt").value;
+      if (!texto.trim()) return;
+
+      const cipher = encrypt(texto, key);
+      ws.send(cipher);
+
+      addMsg("(yo) " + texto);
+      document.getElementById("txt").value = "";
+    }
+
+    // Mostrar mensaje
+    function addMsg(texto) {
+      const div = document.getElementById("mensajes");
+      div.innerHTML += texto + "<br>";
+      div.scrollTop = div.scrollHeight;
+    }
+  </script>
+
+</body>
+</html>

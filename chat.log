@@ -1,0 +1,98 @@
+info: Servidor iniciado en http://localhost:4000 {"timestamp":"2025-11-16T22:19:50.770Z"}
+info: Usuario bauti inició sesión {"timestamp":"2025-11-16T22:26:52.548Z"}
+info: Usuario conectado: bauti {"timestamp":"2025-11-16T22:26:52.697Z"}
+info: Broadcast: bauti se unió al chat {"timestamp":"2025-11-16T22:26:52.698Z"}
+info: Usuario desconectado: bauti {"timestamp":"2025-11-16T22:35:29.284Z"}
+info: Broadcast: bauti salió del chat {"timestamp":"2025-11-16T22:35:29.285Z"}
+info: Usuario conectado: bauti {"timestamp":"2025-11-16T22:35:29.433Z"}
+info: Broadcast: bauti se unió al chat {"timestamp":"2025-11-16T22:35:29.433Z"}
+info: Usuario desconectado: bauti {"timestamp":"2025-11-16T22:37:12.831Z"}
+info: Broadcast: bauti salió del chat {"timestamp":"2025-11-16T22:37:12.832Z"}
+info: Usuario conectado: bauti {"timestamp":"2025-11-16T22:37:12.898Z"}
+info: Broadcast: bauti se unió al chat {"timestamp":"2025-11-16T22:37:12.898Z"}
+info: Usuario desconectado: bauti {"timestamp":"2025-11-16T22:38:18.103Z"}
+info: Broadcast: bauti salió del chat {"timestamp":"2025-11-16T22:38:18.103Z"}
+info: Usuario conectado: bauti {"timestamp":"2025-11-16T22:38:18.205Z"}
+info: Broadcast: bauti se unió al chat {"timestamp":"2025-11-16T22:38:18.206Z"}
+info: Mensaje de bauti: hola {"timestamp":"2025-11-16T22:38:19.884Z"}
+info: Broadcast: bauti: hola {"timestamp":"2025-11-16T22:38:19.884Z"}
+info: Usuario user1 inició sesión {"timestamp":"2025-11-16T22:40:34.706Z"}
+info: Usuario conectado: user1 {"timestamp":"2025-11-16T22:40:34.757Z"}
+info: Broadcast: user1 se unió al chat {"timestamp":"2025-11-16T22:40:34.759Z"}
+info: Mensaje de user1: holaaa {"timestamp":"2025-11-16T22:40:39.638Z"}
+info: Broadcast: user1: holaaa {"timestamp":"2025-11-16T22:40:39.639Z"}
+info: Usuario conectado: user1 {"timestamp":"2025-11-16T22:42:45.455Z"}
+info: Broadcast: user1 se unió al chat {"timestamp":"2025-11-16T22:42:45.456Z"}
+info: Mensaje de user1: asd {"timestamp":"2025-11-16T22:42:53.185Z"}
+info: Broadcast: user1: asd {"timestamp":"2025-11-16T22:42:53.186Z"}
+info: Login fallido para usuario: juan {"timestamp":"2025-11-16T22:45:26.342Z"}
+info: Servidor iniciado en http://localhost:4000 {"timestamp":"2025-11-16T22:45:42.950Z"}
+info: Usuario juan inició sesión {"timestamp":"2025-11-16T22:45:46.188Z"}
+info: Usuario conectado: juan {"timestamp":"2025-11-16T22:45:46.228Z"}
+info: Broadcast: juan se unió al chat {"timestamp":"2025-11-16T22:45:46.229Z"}
+info: Usuario conectado: bauti {"timestamp":"2025-11-16T22:45:59.979Z"}
+info: Broadcast: bauti se unió al chat {"timestamp":"2025-11-16T22:45:59.982Z"}
+info: Usuario conectado: user1 {"timestamp":"2025-11-16T22:46:09.031Z"}
+info: Mensaje de juan: hola {"timestamp":"2025-11-16T22:46:17.436Z"}
+info: Servidor iniciado en http://localhost:4000 {"timestamp":"2025-11-16T22:52:33.558Z"}
+info: Usuario conectado: bauti {"timestamp":"2025-11-16T22:52:38.465Z"}
+info: Broadcast: bauti se unió al chat {"timestamp":"2025-11-16T22:52:38.465Z"}
+info: Usuario conectado: user1 {"timestamp":"2025-11-16T22:52:48.091Z"}
+info: Usuario conectado: juan {"timestamp":"2025-11-16T22:52:50.361Z"}
+info: Usuario juan inició sesión {"timestamp":"2025-11-16T22:53:02.530Z"}
+info: Usuario conectado: juan {"timestamp":"2025-11-16T22:53:02.563Z"}
+info: Usuario pepito inició sesión {"timestamp":"2025-11-16T22:53:23.096Z"}
+info: Usuario conectado: pepito {"timestamp":"2025-11-16T22:53:23.130Z"}
+info: Servidor iniciado en http://localhost:4000 {"timestamp":"2025-11-16T22:55:13.883Z"}
+info: Usuario bauti inició sesión {"timestamp":"2025-11-16T22:56:18.991Z"}
+info: Usuario conectado: bauti {"timestamp":"2025-11-16T22:56:19.086Z"}
+info: Broadcast: bauti se unió al chat {"timestamp":"2025-11-16T22:56:19.086Z"}
+info: Mensaje de bauti: probando {"timestamp":"2025-11-16T22:56:26.103Z"}
+info: Broadcast: bauti: probando {"timestamp":"2025-11-16T22:56:26.103Z"}
+info: Usuario juan inició sesión {"timestamp":"2025-11-16T22:56:45.186Z"}
+info: Usuario conectado: juan {"timestamp":"2025-11-16T22:56:45.252Z"}
+info: Broadcast: juan se unió al chat {"timestamp":"2025-11-16T22:56:45.254Z"}
+info: Usuario conectado: pepito {"timestamp":"2025-11-16T22:56:51.592Z"}
+info: Broadcast: pepito se unió al chat {"timestamp":"2025-11-16T22:56:51.594Z"}
+info: Usuario desconectado: pepito {"timestamp":"2025-11-16T22:56:56.621Z"}
+info: Broadcast: pepito salió del chat {"timestamp":"2025-11-16T22:56:56.622Z"}
+info: Usuario pepito inició sesión {"timestamp":"2025-11-16T22:57:01.805Z"}
+info: Usuario conectado: pepito {"timestamp":"2025-11-16T22:57:01.842Z"}
+info: Broadcast: pepito se unió al chat {"timestamp":"2025-11-16T22:57:01.844Z"}
+info: Mensaje de pepito: hola {"timestamp":"2025-11-16T22:57:08.524Z"}
+info: Broadcast: pepito: hola {"timestamp":"2025-11-16T22:57:08.525Z"}
+info: Mensaje de juan: holaa {"timestamp":"2025-11-16T22:57:15.832Z"}
+info: Broadcast: juan: holaa {"timestamp":"2025-11-16T22:57:15.834Z"}
+info: Mensaje de bauti: test {"timestamp":"2025-11-16T22:57:33.936Z"}
+info: Broadcast: bauti: test {"timestamp":"2025-11-16T22:57:33.937Z"}
+info: Mensaje de bauti: parece que anda todo bien {"timestamp":"2025-11-16T23:00:22.458Z"}
+info: Broadcast: bauti: parece que anda todo bien {"timestamp":"2025-11-16T23:00:22.460Z"}
+info: Mensaje de juan: asi es {"timestamp":"2025-11-16T23:00:26.991Z"}
+info: Broadcast: juan: asi es {"timestamp":"2025-11-16T23:00:26.992Z"}
+info: Usuario desconectado: juan {"timestamp":"2025-11-16T23:00:29.092Z"}
+info: Broadcast: juan salió del chat {"timestamp":"2025-11-16T23:00:29.093Z"}
+info: Mensaje de bauti: genial! {"timestamp":"2025-11-16T23:00:33.676Z"}
+info: Broadcast: bauti: genial! {"timestamp":"2025-11-16T23:00:33.677Z"}
+info: Usuario desconectado: pepito {"timestamp":"2025-11-16T23:00:48.312Z"}
+info: Broadcast: pepito salió del chat {"timestamp":"2025-11-16T23:00:48.313Z"}
+info: Usuario desconectado: bauti {"timestamp":"2025-11-16T23:00:53.347Z"}
+info: Broadcast: bauti salió del chat {"timestamp":"2025-11-16T23:00:53.348Z"}
+info: Servidor iniciado en http://localhost:4000 {"timestamp":"2025-11-17T00:13:03.090Z"}
+info: juan inició sesión {"timestamp":"2025-11-17T00:13:22.963Z"}
+info: Usuario conectado: juan {"timestamp":"2025-11-17T00:13:23.076Z"}
+info: Broadcast: juan se unió al chat {"timestamp":"2025-11-17T00:13:23.077Z"}
+info: Mensaje de juan: hola {"timestamp":"2025-11-17T00:13:33.328Z"}
+info: Broadcast: juan: hola {"timestamp":"2025-11-17T00:13:33.329Z"}
+info: bauti inició sesión {"timestamp":"2025-11-17T00:13:47.544Z"}
+info: Usuario conectado: bauti {"timestamp":"2025-11-17T00:13:47.610Z"}
+info: Broadcast: bauti se unió al chat {"timestamp":"2025-11-17T00:13:47.612Z"}
+info: Mensaje de bauti: hola soy bauti {"timestamp":"2025-11-17T00:13:57.738Z"}
+info: Broadcast: bauti: hola soy bauti {"timestamp":"2025-11-17T00:13:57.738Z"}
+info: Mensaje de juan: ok {"timestamp":"2025-11-17T00:14:07.163Z"}
+info: Broadcast: juan: ok {"timestamp":"2025-11-17T00:14:07.164Z"}
+info: Mensaje de juan: /lista {"timestamp":"2025-11-17T00:17:57.908Z"}
+info: Broadcast: juan: /lista {"timestamp":"2025-11-17T00:17:57.908Z"}
+info: Usuario desconectado: bauti {"timestamp":"2025-11-17T00:29:11.636Z"}
+info: Broadcast: bauti salió del chat {"timestamp":"2025-11-17T00:29:11.637Z"}
+info: Usuario desconectado: juan {"timestamp":"2025-11-17T00:38:04.825Z"}
+info: Broadcast: juan salió del chat {"timestamp":"2025-11-17T00:38:04.825Z"}
