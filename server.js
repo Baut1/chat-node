@@ -27,39 +27,39 @@ const logger = winston.createLogger({
 // Server HTTP + EXPRESS
 const app = express();
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static("cliente"));
 
+// JWT SECRET
 dotenv.config();
 const SECRET = process.env.JWT_SECRET;
 
 // Usuarios
-const users = [
-  { username: "bauti", password: "bautipass" },
-  { username: "user1", password: "pass1" },
-  { username: "juan", password: "perez" },
-  { username: "pepito", password: "pepito" },
-  { username: "asd", password: "asd" }
+const usuarios = [
+  { usuario: "bauti", password: "bautipass" },
+  { usuario: "user1", password: "pass1" },
+  { usuario: "juan", password: "perez" },
+  { usuario: "pepito", password: "pepito" },
+  { usuario: "asd", password: "asd" }
 ];
 
 // sessionKey por usuario
 const sessionKeys = new Map();
-
 // Login
 app.post("/login", (req, res) => {
-  const { username, password } = req.body;
+  const { usuario, password } = req.body;
 
-  const user = users.find(u => u.username === username && u.password === password);
+  const user = usuarios.find(u => u.usuario === usuario && u.password === password);
   if (!user) {
-    logger.info(`Login fallido para usuario: ${username}`);
+    logger.info(`Login fallido para usuario: ${usuario}`);
     return res.status(401).json({ error: "Credenciales inválidas" });
   }
 
-  const token = jwt.sign({ username }, SECRET, { expiresIn: "12h" });
+  const token = jwt.sign({ usuario }, SECRET, { expiresIn: "24h" });
   const sessionKey = CryptoJS.lib.WordArray.random(16).toString();
 
-  sessionKeys.set(username, sessionKey);
+  sessionKeys.set(usuario, sessionKey);
 
-  logger.info(`${username} inició sesión`);
+  logger.info(`${usuario} inició sesión`);
 
   res.json({ token, sessionKey });
 });
@@ -68,7 +68,7 @@ const server = http.createServer(app);
 
 // Server WEBSOCKET
 const wss = new WebSocketServer({ noServer: true });
-const clients = new Map(); // ws → username
+const clients = new Map(); // ws → usuario
 
 server.on("upgrade", (req, socket, head) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
@@ -76,10 +76,10 @@ server.on("upgrade", (req, socket, head) => {
 
   try {
     const data = jwt.verify(token, SECRET);
-    req.username = data.username;
+    req.usuario = data.usuario;
 
     wss.handleUpgrade(req, socket, head, ws => {
-      wss.emit("connection", ws, req.username);
+      wss.emit("connection", ws, req.usuario);
     });
 
   } catch (e) {
@@ -87,47 +87,46 @@ server.on("upgrade", (req, socket, head) => {
   }
 });
 
-wss.on("connection", (ws, username) => {
-  clients.set(ws, username);
-  logger.info(`Usuario conectado: ${username}`);
+wss.on("connection", (ws, usuario) => {
+  clients.set(ws, usuario);
 
-  const joinMsg = `${username} se unió al chat`;
+  logger.info(`Usuario conectado: ${usuario}`);
+  const joinMsg = `${usuario} se unió al chat`;
   broadcast(joinMsg, ws);
 
   ws.on("message", data => {
-    const key = sessionKeys.get(username);
+    const key = sessionKeys.get(usuario);
 
     const decrypted = CryptoJS.AES.decrypt(data.toString(), key)
       .toString(CryptoJS.enc.Utf8);
 
-    logger.info(`Mensaje de ${username}: ${decrypted}`);
-
-    broadcast(`${username}: ${decrypted}`, ws);
+    logger.info(`Mensaje de ${usuario}: ${decrypted}`);
+    broadcast(`${usuario}: ${decrypted}`, ws);
   });
 
   ws.on("close", () => {
     clients.delete(ws);
-    logger.info(`Usuario desconectado: ${username}`);
-    broadcast(`${username} salió del chat`);
+    logger.info(`Usuario desconectado: ${usuario}`);
+    broadcast(`${usuario} salió del chat`);
   });
 
   ws.on("error", err => {
-    logger.info(`Error en WS de ${username}: ${err.message}`);
+    logger.info(`Error en WS de ${usuario}: ${err.message}`);
   });
 });
 
 // broadcast
-function broadcast(text, except = null) {
-  for (const [ws, user] of clients.entries()) {
+function broadcast(texto, except = null) {
+  for (const [ws, usuario] of clients.entries()) {
     if (ws === except) continue;
 
-    const key = sessionKeys.get(user);
-    const encrypted = CryptoJS.AES.encrypt(text, key).toString();
+    const key = sessionKeys.get(usuario);
+    const encrypted = CryptoJS.AES.encrypt(texto, key).toString();
 
     ws.send(encrypted);
   }
 
-  logger.info(`Broadcast: ${text}`);
+  logger.info(`Broadcast: ${texto}`);
 }
 
 // Inicio del sv

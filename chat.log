@@ -96,3 +96,19 @@ info: Usuario desconectado: bauti {"timestamp":"2025-11-17T00:29:11.636Z"}
 info: Broadcast: bauti salió del chat {"timestamp":"2025-11-17T00:29:11.637Z"}
 info: Usuario desconectado: juan {"timestamp":"2025-11-17T00:38:04.825Z"}
 info: Broadcast: juan salió del chat {"timestamp":"2025-11-17T00:38:04.825Z"}
+info: Servidor iniciado en http://localhost:4000 {"timestamp":"2025-11-18T12:15:14.766Z"}
+info: Servidor iniciado en http://localhost:4000 {"timestamp":"2025-11-18T12:16:29.113Z"}
+info: bauti inició sesión {"timestamp":"2025-11-18T12:16:35.734Z"}
+info: Usuario conectado: bauti {"timestamp":"2025-11-18T12:16:35.958Z"}
+info: Broadcast: bauti se unió al chat {"timestamp":"2025-11-18T12:16:35.958Z"}
+info: asd inició sesión {"timestamp":"2025-11-18T12:17:01.616Z"}
+info: Usuario conectado: asd {"timestamp":"2025-11-18T12:17:01.816Z"}
+info: Broadcast: asd se unió al chat {"timestamp":"2025-11-18T12:17:01.820Z"}
+info: Mensaje de asd: hola {"timestamp":"2025-11-18T12:17:05.468Z"}
+info: Broadcast: asd: hola {"timestamp":"2025-11-18T12:17:05.469Z"}
+info: Mensaje de bauti: buenas {"timestamp":"2025-11-18T12:17:11.448Z"}
+info: Broadcast: bauti: buenas {"timestamp":"2025-11-18T12:17:11.450Z"}
+info: Usuario desconectado: asd {"timestamp":"2025-11-18T12:17:23.053Z"}
+info: Broadcast: asd salió del chat {"timestamp":"2025-11-18T12:17:23.056Z"}
+info: Usuario desconectado: bauti {"timestamp":"2025-11-18T12:17:24.143Z"}
+info: Broadcast: bauti salió del chat {"timestamp":"2025-11-18T12:17:24.144Z"}

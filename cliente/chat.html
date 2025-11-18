@@ -45,12 +45,12 @@
     const ws = new WebSocket(`ws://${location.host}/?token=${token}`);
 
     ws.onopen = () => {
-      addMsg("Conectado al servidor");
+      addMsg("Conectado al server");
     };
 
     ws.onmessage = ev => {
-      const text = decrypt(ev.data, key);
-      addMsg(text);
+      const texto = decrypt(ev.data, key);
+      addMsg(texto);
     };
 
     ws.onclose = () => {
@@ -66,10 +66,10 @@
       const texto = document.getElementById("txt").value;
       if (!texto.trim()) return;
 
-      const cipher = encrypt(texto, key);
-      ws.send(cipher);
+      const textoEncriptado = encrypt(texto, key);
+      ws.send(textoEncriptado);
 
-      addMsg("(yo) " + texto);
+      addMsg("(Yo): " + texto);
       document.getElementById("txt").value = "";
     }
 
